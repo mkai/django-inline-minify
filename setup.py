@@ -9,5 +9,5 @@ setup(name='django-inline-minify',
       license='GPL',
       packages=['inlineminify'],
       zip_safe=True,
-      install_requires=['django'],
+      install_requires=['django', 'webassets'],
 )

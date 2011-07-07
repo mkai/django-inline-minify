@@ -1,5 +1,5 @@
 from django import template
-from jspacker import JavaScriptPacker
+from webassets.filter.jspacker.jspacker import JavaScriptPacker
 
 register = template.Library()
 
