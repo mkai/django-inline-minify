@@ -7,7 +7,7 @@ setup(name='django-inline-minify',
       author='Markus Kaiserswerth',
       author_email='mkai@sensun.org',
       license='GPL',
-      packages=['minifyjs'],
+      packages=['inlineminify'],
       zip_safe=True,
       install_requires=['django'],
 )
