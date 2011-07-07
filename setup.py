@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='django-inline-minify',
-      version='0.01',
+      version='0.02',
       description="Django template filter for minifying inline scripts",
       long_description="",
       author='Markus Kaiserswerth',

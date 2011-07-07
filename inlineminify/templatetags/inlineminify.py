@@ -3,6 +3,7 @@ from webassets.filter.jspacker.jspacker import JavaScriptPacker
 
 register = template.Library()
 
+@register.tag
 class MinifyJs(template.Node):
     def __init__(self, nodelist):
         self.nodelist = nodelist
@@ -10,9 +11,7 @@ class MinifyJs(template.Node):
         return JavaScriptPacker().pack(self.nodelist.render(context), 
             compaction=False, encoding=62, fastDecode=True)
 
-def minifyjs(parser, token):
+def inlineminify(parser, token):
     nodelist = parser.parse(('endinlineminify',))
     parser.delete_first_token()
     return MinifyJs(nodelist)
-
-minifyjs = register.tag(minifyjs)
