@@ -1,1 +1,1 @@
-Django template filter to minify inline scripts
+Django template tag to minify inline scripts
