@@ -13,7 +13,7 @@ class MinifyJs(template.Node):
         #     compaction=True, encoding=62, fastDecode=True)
 
 @register.tag
-def inlineminify(parser, token):
-    nodelist = parser.parse(('endinlineminify',))
+def minify(parser, token):
+    nodelist = parser.parse(('endminify',))
     parser.delete_first_token()
     return MinifyJs(nodelist)
