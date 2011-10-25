@@ -1,5 +1,5 @@
 from django import template
-from minify.libs.jsmin import jsmin
+from ..lib.jsmin import jsmin
 
 register = template.Library()
 
