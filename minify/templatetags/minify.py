@@ -1,6 +1,5 @@
 from django import template
-# from webassets.filter.jspacker.jspacker import JavaScriptPacker
-from webassets.filter.jsmin.jsmin import jsmin
+from minify.libs.jsmin import jsmin
 
 register = template.Library()
 
@@ -9,9 +8,7 @@ class MinifyJs(template.Node):
         self.nodelist = nodelist
     def render(self, context):
         return jsmin(self.nodelist.render(context))
-        # return JavaScriptPacker().pack(self.nodelist.render(context), 
-        #     compaction=True, encoding=62, fastDecode=True)
-
+        
 @register.tag
 def minify(parser, token):
     nodelist = parser.parse(('endminify',))
